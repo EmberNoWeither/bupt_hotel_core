@@ -71,14 +71,14 @@ class BaseSimulator(object):
         return 1
         
         
-    def set_property(self, attr='', value:any=None, operator:function=None):
+    def set_property(self, attr='', value:any=None, operator:function=None, *args, **kwds):
         if self.type_erro_detect(attr, value):
                     return "having basic error!"
                 
         if not isinstance(operator, function):
             raise "operator is not a function"
         
-        result = operator(attr, value)
+        result = operator(self.__property, attr, value, *args, **kwds)
         if len(result) != 1:
             raise "operator should just have one return value"
         
