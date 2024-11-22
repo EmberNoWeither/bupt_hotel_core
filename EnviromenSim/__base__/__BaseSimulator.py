@@ -55,6 +55,7 @@ class BaseSimulator(object):
             return True
         
         if attr not in list(self.__property.keys()):
+            print(self.__property.keys())
             print('Didn\'t have this type of __property!')
             return True
         
@@ -71,7 +72,7 @@ class BaseSimulator(object):
         return 1
         
         
-    def set_property(self, attr='', value:any=None, operator:function=None, *args, **kwds):
+    def set_property(self, attr='', value:any=None, operator=None, *args, **kwds):
         if self.type_erro_detect(attr, value):
                     return "having basic error!"
                 

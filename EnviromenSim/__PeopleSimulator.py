@@ -1,5 +1,4 @@
-from __base__.__BaseSimulator import BaseSimulator
-from ..utils.BaseValue import PA
+from .__base__.__BaseSimulator import BaseSimulator
 
 class PeopleSimulator(BaseSimulator):
     def __init__(self, phone_number, id_card, sign_time) -> None:

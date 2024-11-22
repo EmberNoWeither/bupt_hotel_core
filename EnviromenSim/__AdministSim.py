@@ -1,4 +1,4 @@
-from __PeopleSimulator import PeopleSimulator as People
+from .__PeopleSimulator import PeopleSimulator as People
 from ..utils.BaseValue import PA
 import copy
 
